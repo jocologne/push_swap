@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 13:39:49 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/28 16:12:13 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/28 17:29:59 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	isnumber(char *s)
 
 int	repeats(t_node *stack, int n)
 {
-	while(stack)
+	while (stack)
 	{
 		if (stack->value == n)
 		{
@@ -39,7 +39,7 @@ int	repeats(t_node *stack, int n)
 	return (0);
 }
 
-void error_exit(t_node **stack)
+void	error_exit(t_node **stack)
 {
 	free_stack(stack);
 	write(1, "Argument Error\n", 14);

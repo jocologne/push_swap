@@ -6,15 +6,16 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 20:29:13 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/28 16:17:19 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/28 18:14:06 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void fill_stack(t_node **stack, char *str)
+void	fill_stack(t_node **stack, char *str)
 {
 	long	n;
+
 	if (!isnumber(str))
 		error_exit(stack);
 	n = ft_atol(str);
@@ -25,9 +26,9 @@ void fill_stack(t_node **stack, char *str)
 	insert_node(stack, n);
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	t_node *a; //Cria o primeiro nó da lista a.
+	t_node	*a;
 
 	a = NULL;
 	if (ac == 1)
@@ -38,10 +39,7 @@ int main(int ac, char **av)
 		fill_stack(&a, *av);
 		av++;
 	}
-	while (a)
-	{
-		printf("%d\n", a->value);
-		a = a->next;
-	}
+	set_position(a);
+	print_stack(a);
 	return (0);
 }

@@ -6,13 +6,13 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 13:41:21 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/29 14:02:34 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/29 19:01:48 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push(t_node **dest, t_node **src)
+static void	push(t_node **dest, t_node **src)
 {
 	t_node	*node_push;
 
@@ -34,4 +34,16 @@ void	push(t_node **dest, t_node **src)
 		node_push->next->prev = node_push;
 		*dest = node_push;
 	}
+}
+
+void	pb(t_node **b, t_node **a)
+{
+	push(b, a);
+	write(1, "pb\n", 3);
+}
+
+void	pa(t_node **a, t_node **b)
+{
+	push(a, b);
+	write(1, "pa\n", 3);
 }

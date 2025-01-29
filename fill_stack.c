@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_check.c                                      :+:      :+:    :+:   */
+/*   fill_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 13:39:49 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/28 17:29:59 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/29 16:27:01 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,3 +45,30 @@ void	error_exit(t_node **stack)
 	write(1, "Argument Error\n", 14);
 	exit(2);
 }
+
+void	insert_node(t_node **stack, int num)
+{
+	t_node	*new_node;
+	t_node	*last_node;
+
+	if (stack == NULL)
+		return ;
+	new_node = malloc (sizeof(t_node));
+	if (new_node == NULL)
+		return ;
+	new_node->next = NULL;
+	new_node->value = num;
+	if (*stack == NULL)
+	{
+		*stack = new_node;
+		new_node->prev = NULL;
+	}
+	else
+	{
+		last_node = return_last_node(*stack);
+		last_node->next = new_node;
+		new_node->prev = last_node;
+	}
+}
+
+

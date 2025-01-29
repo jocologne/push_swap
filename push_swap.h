@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 20:31:33 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/29 15:21:36 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/29 19:03:10 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ typedef struct s_node
 
 //stack_utils
 t_node	*return_last_node(t_node *stack);
-void		insert_node(t_node **stack, int num);
 void		free_stack(t_node **stack);
 void		set_position(t_node *stack);
 int		stack_len(t_node *stack);
@@ -38,15 +37,33 @@ int		stack_len(t_node *stack);
 //utils
 int		ft_atol(const char *n);
 
-//error_check
+//fill_stack
 int	isnumber(char *s);
 int	repeats(t_node *stack, int n);
 void	error_exit(t_node **stack);
+void	insert_node(t_node **stack, int num);
 
-//commands
-void	push(t_node **dest, t_node **src);
-void	rotate(t_node **stack);
-void	reverse_rotate(t_node **stack);
+//push commands
+void	pa(t_node **a, t_node **b);
+void	pb(t_node **b, t_node **a);
+
+//rotate commands
+void	ra(t_node **a);
+void	rb(t_node **b);
+void	rr(t_node **a, t_node **b);
+
+//reverse rotate commands
+void	rra(t_node **a);
+void	rrb(t_node **b);
+void	rrr(t_node **a, t_node **b);
+
+//swap commands
+void	sa(t_node **a);
+void	sb(t_node **b);
+void	ss(t_node **a, t_node **b);
+
+//push_swap
+void	push_swap(t_node **a, t_node **b);
 
 //FUNCOES DE TESTE
 void print_stack(t_node *stack);

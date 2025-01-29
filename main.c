@@ -6,13 +6,13 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 20:29:13 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/29 15:22:17 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/29 16:28:13 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	fill_stack(t_node **stack, char *str)
+static void	fill_stack(t_node **stack, char *str)
 {
 	long	n;
 
@@ -29,10 +29,10 @@ void	fill_stack(t_node **stack, char *str)
 int	main(int ac, char **av)
 {
 	t_node	*a;
-	//t_node	*b;
+	t_node	*b;
 
 	a = NULL;
-	//b = NULL;
+	b = NULL;
 	if (ac == 1)
 		error_exit(&a);
 	av++;
@@ -41,11 +41,6 @@ int	main(int ac, char **av)
 		fill_stack(&a, *av);
 		av++;
 	}
-	set_position(a);
-	print_stack(a);
-	reverse_rotate(&a);
-	reverse_rotate(&a);
-	set_position(a);
-	print_stack(a);
+	push_swap(&a, &b);
 	return (0);
 }

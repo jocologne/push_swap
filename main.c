@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 20:29:13 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/29 16:28:13 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/29 19:09:19 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,7 @@ int	main(int ac, char **av)
 		av++;
 	}
 	push_swap(&a, &b);
+	free_stack(&a);
+	free_stack(&b);
 	return (0);
 }

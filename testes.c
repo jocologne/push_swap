@@ -8,4 +8,5 @@ void print_stack(t_node *stack)
 		printf("%d_%d\n", stack->position, stack->value);
 		stack = stack->next;
 	}
+	printf("\n");
 }

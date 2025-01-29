@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 20:29:13 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/28 18:14:06 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:56:52 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,10 @@ void	fill_stack(t_node **stack, char *str)
 int	main(int ac, char **av)
 {
 	t_node	*a;
+	//t_node	*b;
 
 	a = NULL;
+	//b = NULL;
 	if (ac == 1)
 		error_exit(&a);
 	av++;

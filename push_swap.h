@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 20:31:33 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/28 18:13:03 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:51:44 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,10 @@ int		ft_atol(const char *n);
 int	isnumber(char *s);
 int	repeats(t_node *stack, int n);
 void	error_exit(t_node **stack);
+
+//commands
+void	push(t_node **dest, t_node **src);
+void	rotate(t_node **stack);
 
 //FUNCOES DE TESTE
 void print_stack(t_node *stack);

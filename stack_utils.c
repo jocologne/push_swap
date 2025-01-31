@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 21:54:15 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/31 15:15:54 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/31 18:14:32 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,13 @@ void	set_position(t_node *stack)
 	i = 0;
 	while (stack)
 	{
-		stack->position = i++;
+		if (i <= stack_len(stack) / 2)
+			stack->tophalf = 1;
+		else
+			stack->tophalf = 0;
+		stack->position = i;
 		stack = stack->next;
+		i++;
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 20:31:33 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/31 15:47:44 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/31 18:13:31 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct s_node
 {
 	int				value;
 	int				position;
+	int				tophalf;
 	struct s_node	*prev;
 	struct s_node	*next;
 	struct s_node	*target;
@@ -69,6 +70,9 @@ void	push_swap(t_node **a, t_node **b);
 
 //special_cases
 void sort_three(t_node **stack);
+
+//update
+void	update_values(t_node *a, t_node *b);
 
 //FUNCOES DE TESTE
 void print_stack(t_node *stack);

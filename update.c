@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 13:48:36 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/31 15:38:11 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/31 17:37:08 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static void	find_target(t_node *a, t_node *b)
 	}
 }
 
-void	init_values(t_node *a, t_node *b)
+void	update_values(t_node *a, t_node *b)
 {
 	set_position(a);
 	set_position(b);

@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 21:54:15 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/29 16:50:40 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/31 15:15:54 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,22 +43,43 @@ void	set_position(t_node *stack)
 	int	i;
 
 	i = 0;
-	while(stack)
+	while (stack)
 	{
 		stack->position = i++;
 		stack = stack->next;
 	}
 }
 
-int stack_len(t_node *stack)
+int	stack_len(t_node *stack)
 {
 	int	i;
 
 	i = 0;
-	while(stack)
+	while (stack)
 	{
 		stack = stack->next;
 		i++;
 	}
 	return (i);
 }
+
+t_node	*return_low(t_node *stack)
+{
+	t_node	*result;
+	long	lowest;
+
+	result = stack;
+	lowest = stack->value;
+	while (stack)
+	{
+		if (stack->value < lowest)
+		{
+			lowest = stack->value;
+			result = stack;
+		}
+		stack = stack->next;
+	}
+	return (result);
+}
+
+//t_node return_high

@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 13:39:49 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/29 16:27:01 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/31 15:39:02 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,3 @@ void	insert_node(t_node **stack, int num)
 		new_node->prev = last_node;
 	}
 }
-
-

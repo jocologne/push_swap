@@ -6,15 +6,15 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 16:38:42 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/28 17:32:07 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/31 15:39:59 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atol(char *n)
 {
-	int	sign;
+	int		sign;
 	long	num;
-	int	i;
+	int		i;
 
 	i = 0;
 	sign = 1;

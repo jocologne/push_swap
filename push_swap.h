@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 20:31:33 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/29 19:03:10 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/31 15:47:44 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_node
 	int				position;
 	struct s_node	*prev;
 	struct s_node	*next;
+	struct s_node	*target;
 }	t_node;
 
 //stack_utils
@@ -33,6 +34,7 @@ t_node	*return_last_node(t_node *stack);
 void		free_stack(t_node **stack);
 void		set_position(t_node *stack);
 int		stack_len(t_node *stack);
+t_node	*return_low(t_node *stack);
 
 //utils
 int		ft_atol(const char *n);
@@ -64,6 +66,9 @@ void	ss(t_node **a, t_node **b);
 
 //push_swap
 void	push_swap(t_node **a, t_node **b);
+
+//special_cases
+void sort_three(t_node **stack);
 
 //FUNCOES DE TESTE
 void print_stack(t_node *stack);

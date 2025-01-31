@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 17:54:29 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/29 19:04:34 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/31 15:39:29 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	swap(t_node **stack)
 	*stack = (*stack)->next;
 	(*stack)->prev->prev = *stack;
 	(*stack)->prev->next = (*stack)->next;
-	if((*stack)->next)
+	if ((*stack)->next)
 		(*stack)->next->prev = (*stack)->prev;
 	(*stack)->next = (*stack)->prev;
 	(*stack)->prev = NULL;

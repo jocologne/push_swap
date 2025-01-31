@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 15:11:01 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/29 19:01:40 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/31 15:37:22 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,18 @@ static void	reverse_rotate(t_node **stack)
 void	rra(t_node **a)
 {
 	reverse_rotate(a);
-	write(1,"rra\n", 4);
+	write(1, "rra\n", 4);
 }
 
 void	rrb(t_node **b)
 {
 	reverse_rotate(b);
-	write(1,"rrb\n", 4);
+	write (1, "rrb\n", 4);
 }
 
 void	rrr(t_node **a, t_node **b)
 {
 	reverse_rotate(a);
 	reverse_rotate(b);
-	write(1,"rrr\n", 4);
+	write(1, "rrr\n", 4);
 }

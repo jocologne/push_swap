@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 14:42:20 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/29 16:17:25 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/31 15:38:44 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,19 @@ static void	rotate(t_node **stack)
 	last_node->next->next = NULL;
 }
 
-void ra(t_node **a)
+void	ra(t_node **a)
 {
 	rotate(a);
 	write(1, "ra\n", 3);
 }
 
-void rb(t_node **b)
+void	rb(t_node **b)
 {
 	rotate(b);
 	write(1, "rb\n", 3);
 }
 
-void rr(t_node **a, t_node **b)
+void	rr(t_node **a, t_node **b)
 {
 	rotate(a);
 	rotate(b);

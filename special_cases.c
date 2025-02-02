@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 15:00:24 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/31 16:09:29 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/02/01 22:02:20 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static t_node	*return_high(t_node *stack)
 	return (result);
 }
 
-void sort_three(t_node **stack)
+void	sort_three(t_node **stack)
 {
 	if (*stack == return_high(*stack))
 		ra(stack);

@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 15:46:59 by jcologne          #+#    #+#             */
-/*   Updated: 2025/02/01 21:04:58 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/02/01 22:01:15 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 static void	rotate_a_b(t_node **a, t_node **b, t_node *best)
 {
 	while (*a != best->target && *b != best)
-		rr(a,b);
+		rr(a, b);
 	set_position(*a);
 	set_position(*b);
 }
 
-static void reverse_rotate_a_b(t_node **a, t_node **b, t_node *best)
+static void	reverse_rotate_a_b(t_node **a, t_node **b, t_node *best)
 {
 	while (*a != best->target && *b != best)
 		rrr(a, b);
@@ -28,7 +28,7 @@ static void reverse_rotate_a_b(t_node **a, t_node **b, t_node *best)
 	set_position(*b);
 }
 
-static void rotate_one(t_node **a, t_node **b, t_node *best)
+static void	rotate_one(t_node **a, t_node **b, t_node *best)
 {
 	while (*a != best->target && best->target->tophalf)
 		ra(a);
@@ -80,5 +80,4 @@ void	push_swap(t_node **a, t_node **b)
 		while (*a != return_low(*a))
 			rra(a);
 	}
-	print_stack(*a);
 }

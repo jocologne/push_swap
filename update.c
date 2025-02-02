@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 13:48:36 by jcologne          #+#    #+#             */
-/*   Updated: 2025/02/01 20:28:59 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/02/01 22:00:22 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	price(t_node *a, t_node *b)
 static void	best_price(t_node *b)
 {
 	long		best;
-	t_node	*result;
+	t_node		*result;
 
 	result = NULL;
 	best = LONG_MAX;
@@ -80,17 +80,17 @@ static void	best_price(t_node *b)
 		result->isbest = 1;
 }
 
-t_node *return_best(t_node *stack)
+t_node	*return_best(t_node *stack)
 {
 	if (stack == NULL)
-		return NULL;
+		return (NULL);
 	while (stack)
 	{
 		if (stack->isbest)
-			return stack;
+			return (stack);
 		stack = stack->next;
 	}
-	return NULL;
+	return (NULL);
 }
 
 void	update_values(t_node *a, t_node *b)

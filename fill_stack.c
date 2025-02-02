@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 13:39:49 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/31 15:39:02 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/01/31 23:05:55 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,13 @@ int	isnumber(char *s)
 		return (0);
 	if ((*s == '+' || *s == '-') && !(s[1] >= '0' && s[1] <= '9'))
 		return (0);
-	while (*++s)
+	if (s[0] == '+' || s[0] == '-')
+		s++;
+	while (*s)
 	{
 		if (!(*s >= '0' && *s <= '9'))
 			return (0);
+		s++;
 	}
 	return (1);
 }
@@ -42,7 +45,7 @@ int	repeats(t_node *stack, int n)
 void	error_exit(t_node **stack)
 {
 	free_stack(stack);
-	write(1, "Argument Error\n", 14);
+	write(1, "Error\n", 5);
 	exit(2);
 }
 

@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 20:31:33 by jcologne          #+#    #+#             */
-/*   Updated: 2025/02/02 01:56:58 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/02/02 02:55:13 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		stack_len(t_node *stack);
 t_node	*return_low(t_node *stack);
 
 //utils
-int		ft_atol(char *n);
+long		ft_atol(char *n);
 int		is_sorted(t_node *stack);
 
 //fill_stack
@@ -78,8 +78,5 @@ void	sort_three(t_node **stack);
 void	update_values(t_node *a, t_node *b);
 void	price(t_node *a, t_node *b);
 t_node	*return_best(t_node *stack);
-
-//FUNCOES DE TESTE
-void	print_stack(t_node *stack);
 
 #endif

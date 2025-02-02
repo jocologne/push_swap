@@ -6,13 +6,13 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 16:38:42 by jcologne          #+#    #+#             */
-/*   Updated: 2025/02/02 01:58:28 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/02/02 02:55:25 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_atol(char *n)
+long	ft_atol(char *n)
 {
 	int		sign;
 	long	num;

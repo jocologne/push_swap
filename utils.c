@@ -6,9 +6,11 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 16:38:42 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/31 15:39:59 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/02/02 01:58:28 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h"
 
 int	ft_atol(char *n)
 {
@@ -36,4 +38,15 @@ int	ft_atol(char *n)
 		i++;
 	}
 	return (num * sign);
+}
+
+int	is_sorted(t_node *stack)
+{
+	while (stack && stack->next)
+	{
+		if (stack->next->value < stack->value)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
 }

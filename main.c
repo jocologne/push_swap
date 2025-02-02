@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 20:29:13 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/29 19:09:19 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/02/02 01:56:12 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,18 @@ int	main(int ac, char **av)
 
 	a = NULL;
 	b = NULL;
-	if (ac == 1)
-		error_exit(&a);
+	if (ac == 1 || ac == 2)
+	{
+		return (1);
+	}
 	av++;
 	while (*av)
 	{
 		fill_stack(&a, *av);
 		av++;
 	}
+	if (is_sorted(a))
+		return (1);
 	push_swap(&a, &b);
 	free_stack(&a);
 	free_stack(&b);

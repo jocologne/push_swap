@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 21:54:15 by jcologne          #+#    #+#             */
-/*   Updated: 2025/01/31 18:14:32 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/02/02 01:49:17 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,3 @@ t_node	*return_low(t_node *stack)
 	}
 	return (result);
 }
-
-//t_node return_high

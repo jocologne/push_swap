@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 20:31:33 by jcologne          #+#    #+#             */
-/*   Updated: 2025/02/01 20:32:03 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/02/02 01:56:58 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ int		stack_len(t_node *stack);
 t_node	*return_low(t_node *stack);
 
 //utils
-int		ft_atol(const char *n);
+int		ft_atol(char *n);
+int		is_sorted(t_node *stack);
 
 //fill_stack
 int		isnumber(char *s);

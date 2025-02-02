@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 20:29:13 by jcologne          #+#    #+#             */
-/*   Updated: 2025/02/02 01:56:12 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/02/02 02:41:52 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,10 @@ int	main(int ac, char **av)
 		av++;
 	}
 	if (is_sorted(a))
+	{
+		free_stack(&a);
 		return (1);
+	}
 	push_swap(&a, &b);
 	free_stack(&a);
 	free_stack(&b);
